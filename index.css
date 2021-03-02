@@ -1,17 +1,109 @@
-* {
+*, body {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
     letter-spacing: 4px;
     word-spacing: 2px;
+    background-color: black;
 }
 
-body {
+#buttoncontainer {
     height: 100vh;
     width: 100vw;
     display: flex;
     flex-wrap: wrap;
     background-color: rgb(59, 59, 59);
+    margin: 0;
+}
+
+#cardcontainer {
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#card {
+    background-color: rgba(255, 255, 255, 0);
+    width: 32vw;
+    height: 50vh;
+    position: relative;
+    z-index: 1;
+    transition:  transform 0.5s, color 0.2s;
+    display: flex;
+    flex-wrap: wrap;
+    color: white;
+}
+
+#card:hover {
+    transform: translateY(-20px);
+}
+
+#card.flip-class {
+    transform: translateY(-20px) scaleX(-1);
+    color: rgba(0,0,0,0);
+}
+
+#card::before {
+    background: linear-gradient(45deg, rgb(255, 0, 200), rgb(160, 7, 248));
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 1;
+}
+
+#card::after {
+    background: linear-gradient(45deg, rgb(255, 0, 200), rgb(160, 7, 248));
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 1;
+    filter: blur(30px);
+}
+
+#card h1, #card span {
+    background-color: rgba(255, 255, 255, 0);
+    width: 100%;
+}
+
+#card h1 {
+    line-height: 1.2em;
+    margin-top: 30%;
+    margin-bottom: 10%;
+    text-align: center;
+}
+
+#card span {
+    margin-bottom: 20%;
+}
+
+
+#background {
+    background: rgba(0, 0, 0, 0.4);
+    margin: 2.5%;
+    padding: 5%;
+}
+
+#background::before {
+    content: '';
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    position: absolute;
 }
 
 #button1 {
@@ -129,10 +221,10 @@ button {
     border-radius: 0px 0px 20px 0px;
     width: 20px;
     height: 20px;
-    left: -1%;
+    left: 0%;
     top: -1%;
     background: #e201c4;
-    transition: all 0.25s ease-in;
+    transition: all 0.2s ease-in;
     z-index: -1;
 }
 
@@ -146,18 +238,18 @@ button {
     right: -1px;
     background: #e201c4;
     z-index: -1;
-    transition: all 0.25s ease-in;
+    transition: all 0.2s ease-in;
 }
 
 #button4:hover::before {
     content: "";
     position: absolute;
-    left: -1%;
+    left: 0;
     right: 0;
     bottom: 0;
     height: 102%;
-    width: 51%;
-    border-radius: 0px;
+    width: 60%;
+    border-radius: 0px 0px 20px 0px;
 }
 
 #button4:hover::after {
@@ -166,6 +258,6 @@ button {
     right: -1;
     bottom: -1;
     height: 103%;
-    width: 51%;
-    border-radius: 0px;
+    width: 60%;
+    border-radius: 20px 0px 0px 0px;
 }
