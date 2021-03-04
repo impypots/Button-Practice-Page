@@ -29,7 +29,7 @@
 
 #card {
     background-color: rgba(255, 255, 255, 0);
-    width: 32vw;
+    width: 16vw;
     height: 50vh;
     position: relative;
     z-index: 1;
@@ -260,4 +260,20 @@ button {
     height: 103%;
     width: 60%;
     border-radius: 20px 0px 0px 0px;
+}
+
+#testcontainer:hover {
+    height: 100vh;
+    width: 100vw;
+    background-image: url('C:/Users/Owner/Documents/GitHub/Button-Practice-Page/MTG-API-Card-Game-gif.gif');
+    background-size: auto;
+    background-repeat: no-repeat;
+}
+
+#testcontainer {
+    height: 20vh;
+    width: 30vw;
+    background-image: url('C:/Users/Owner/Documents/GitHub/Button-Practice-Page/MTG-API-Card-Game-jpg.jpg');
+    background-size: auto;
+    background-repeat: no-repeat;
 }
