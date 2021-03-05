@@ -262,18 +262,58 @@ button {
     border-radius: 20px 0px 0px 0px;
 }
 
-#testcontainer:hover {
+#testcontainer {
     height: 100vh;
     width: 100vw;
-    background-image: url('C:/Users/Owner/Documents/GitHub/Button-Practice-Page/MTG-API-Card-Game-gif.gif');
-    background-size: auto;
-    background-repeat: no-repeat;
+   display: flex;
+   justify-content: center;
 }
 
-#testcontainer {
-    height: 20vh;
-    width: 30vw;
-    background-image: url('C:/Users/Owner/Documents/GitHub/Button-Practice-Page/MTG-API-Card-Game-jpg.jpg');
-    background-size: auto;
+.example {
+    height: 20vw;
+    width: 40vw;
+    margin-top: 20vh;
+    background: white;
+    text-align: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+    border-radius: 4px;
+    transition: all 1s ease;
+}
+
+.example::before {
+    content: 'See preview!';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 50%;
+    color: white;
+    background-color: rgb(34, 34, 59);
+    border-radius: 4px 0px 0 4px;
+    transition: all 0.4s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.example:hover::before {
+    content: '';
+    width: 0%;
+}
+
+.image {
+    background-color: white;
+    background-image: url("https://lparchive.org/Avalon-Code/Images/2-UfMQK.gif");
+    height: 50%;
+    width: 50%;
     background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.example div, .example a, .example h4 {
+    background-color: white;
+    text-align: center;
 }
