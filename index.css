@@ -262,6 +262,61 @@ button {
     border-radius: 20px 0px 0px 0px;
 }
 
+#button5 {
+    color: white;
+    background: rgb(59, 59, 59);
+    border: none;
+    font-size: 1.2em;
+    height: 7vh;
+    width: 15vw;
+    text-align: center;
+    margin: auto 20vw auto 15vw;
+    padding: auto;
+    border-radius: 3px;
+    border: 2px solid #e201c4;
+    outline: none;
+    cursor: pointer;
+    transition: ease-in 0.4s;
+    position: relative;
+    z-index: 1;
+}
+
+#button5::before {
+    content: "";
+    position: absolute;
+    top: -17%;
+    left: 10%;
+    background-color:#e201c4;
+    border-left: 2px solid #e201c4;
+    border-right: 2px solid #e201c4;
+    width: 15px;
+    height: 20px;
+    transition: ease-in-out 0.2s;
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+
+#button5::after {
+    content: "";
+    position: absolute;
+    bottom: -17%;
+    right: 10%;
+    background-color:#e201c4;
+    border-left: 2px solid #e201c4;
+    border-right: 2px solid #e201c4;
+    width: 15px;
+    height: 20px;
+    transition: ease-in-out 0.25s;
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+
+#button5:hover::before {
+    left: 85%;
+}
+
+#button5:hover::after {
+    right: 85%;
+}
+
 #testcontainer {
     height: 100vh;
     width: 100vw;
@@ -290,7 +345,7 @@ button {
     left: 0;
     height: 100%;
     width: 50%;
-    color: white;
+    color: rgba(255, 255, 255, 1);
     background-color: rgb(34, 34, 59);
     border-radius: 4px 0px 0 4px;
     transition: all 0.4s ease;
