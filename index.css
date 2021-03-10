@@ -291,7 +291,7 @@ button {
     border-right: 2px solid #e201c4;
     width: 15px;
     height: 20px;
-    transition: ease-in-out 0.2s;
+    transition: ease-in-out 0.25s;
     clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
 }
 
@@ -315,6 +315,25 @@ button {
 
 #button5:hover::after {
     right: 85%;
+}
+
+#button6 {
+    color: white;
+    background: rgb(59, 59, 59);
+    border: none;
+    font-size: 1.2em;
+    height: 7vh;
+    width: 15vw;
+    text-align: center;
+    margin: auto 20vw auto 15vw;
+    padding: auto;
+    border-radius: 3px;
+    border: 2px solid #e201c4;
+    outline: none;
+    cursor: pointer;
+    transition: ease-in 0.4s;
+    position: relative;
+    z-index: 1;
 }
 
 #testcontainer {
